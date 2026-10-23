@@ -517,6 +517,11 @@ const httpServer = http.createServer(async (req, res) => {
     }
   }
 
+  if (method === 'GET' && pathname === '/icone.png') {
+    res.writeHead(200, { 'Content-Type': 'image/png', 'Cache-Control': 'public, max-age=86400' });
+    return res.end(require('fs').readFileSync(require('path').join(__dirname, 'icone.png')));
+  }
+  
   // Route introuvable
   return sendJson(res, 404, { ok: false, error: 'Route non trouvée' });
 });
