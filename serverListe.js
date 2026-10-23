@@ -136,6 +136,7 @@ function renderHtmlDashboard() {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icone" type="image/png" href="/icone.png">
   <title>Annuaire des serveurs MSG</title>
   <style>
     :root {
