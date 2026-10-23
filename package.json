@@ -1,0 +1,5 @@
+{
+     "name": "server-liste",
+     "version": "1.0.0",
+     "scripts": { "start": "node serverListe.js" }
+   }
