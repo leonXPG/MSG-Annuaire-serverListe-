@@ -136,7 +136,6 @@ function renderHtmlDashboard() {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="/icon.png">
   <title>Annuaire des serveurs MSG</title>
   <style>
     :root {
@@ -518,11 +517,6 @@ const httpServer = http.createServer(async (req, res) => {
     }
   }
 
-  if (method === 'GET' && pathname === '/icon.png') {
-    res.writeHead(200, { 'Content-Type': 'image/png', 'Cache-Control': 'public, max-age=86400' });
-    return res.end(require('fs').readFileSync(require('path').join(__dirname, 'icon.png')));
-  }
-  
   // Route introuvable
   return sendJson(res, 404, { ok: false, error: 'Route non trouvée' });
 });
